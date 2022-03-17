@@ -1,0 +1,203 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+
+
+
+
+// choice
+
+
+// <li class="choice">
+  
+// <input id="cs1" class="choice__switch" name="choice1" type="radio" checked>
+// <input id="cs2" class="choice__switch" name="choice1" type="radio">
+// <input id="cs3" class="choice__switch" name="choice1" type="radio">
+// <input id="cs4" class="choice__switch" name="choice1" type="radio">
+// <input id="cs5" class="choice__switch" name="choice1" type="radio">
+
+// <input class="choice__drop-switch" id="cds1" type="checkbox">
+// <label class="choice__drop-button" for="cds1">Сountry:</label>
+
+// <label class="choice-overlay" for="cds1"></label>
+
+// <div class="choice__select">
+//   <label for="cs1">Sweden</label>
+//   <label for="cs2">Option 2</label>
+//   <label for="cs3">Option 3</label>
+//   <label for="cs4">Option 4</label>
+//   <label for="cs5">Option 5</label>
+// </div>
+
+// </li>
+
+// <li class="choice">
+
+// <input id="cs11" class="choice__switch" name="choice2" type="radio" checked>
+// <input id="cs21" class="choice__switch" name="choice2" type="radio">
+// <input id="cs31" class="choice__switch" name="choice2" type="radio">
+// <input id="cs41" class="choice__switch" name="choice2" type="radio">
+// <input id="cs51" class="choice__switch" name="choice2" type="radio">
+
+// <input class="choice__drop-switch" id="cds2" type="checkbox">
+// <label class="choice__drop-button" for="cds2">Language:</label>
+
+// <label class="choice-overlay" for="cds2"></label>
+
+// <div class="choice__select">
+//   <label for="cs11">Svenska</label>
+//   <label for="cs21">Option 2</label>
+//   <label for="cs31">Option 3</label>
+//   <label for="cs41">Option 4</label>
+//   <label for="cs51">Option 5</label>
+// </div>
+
+// </li>
+
+// <li class="choice">
+
+// <input id="cs12" class="choice__switch" name="choice3" type="radio" checked>
+// <input id="cs22" class="choice__switch" name="choice3" type="radio">
+// <input id="cs32" class="choice__switch" name="choice3" type="radio">
+// <input id="cs42" class="choice__switch" name="choice3" type="radio">
+// <input id="cs52" class="choice__switch" name="choice3" type="radio">
+
+// <input class="choice__drop-switch" id="cds3" type="checkbox">
+// <label class="choice__drop-button" for="cds3">Сurrency:</label>
+
+// <label class="choice-overlay" for="cds3"></label>
+
+// <div class="choice__select">
+//   <label for="cs12">$</label>
+//   <label for="cs22">Option 2</label>
+//   <label for="cs32">Option 3</label>
+//   <label for="cs42">Option 4</label>
+//   <label for="cs52">Option 5</label>
+// </div>
+
+// </li>
+
+// .choice {
+//   // max-width: 200px;
+//   // min-width: 200px;
+//   position: relative;
+
+//   &__drop-switch {
+//     display: none;
+//     &:checked ~ .choice__drop-button {
+//       background-color: coral;
+//       color: white;
+//       opacity: 1;
+//       @media (any-hover: hover) {
+//         &:hover {
+//           background-color: orange;
+//         }
+//       }
+//     }
+//     &:checked ~ .choice__drop-button:after {
+//       transform: translateY(-50%) rotate(180deg);
+//     }
+//     &:checked ~ .choice__select {
+//       top: calc(100% + 5px);
+//     }
+//     &:checked ~ .choice__select label {
+//       position: relative;
+//       z-index: 10;
+//       opacity: 1;
+//       visibility: visible;
+//       max-height: 100vh;
+//       padding: 10px;
+//       &:not(:last-child) {
+//         margin-bottom: 5px;
+//       }
+//     }
+//     &:checked ~ .choice-overlay {
+//       z-index: 9;
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//   }
+
+//   &__drop-button {
+//     display: block;
+//     padding: 10px 30px 10px 10px;
+//     color: green;
+//     border-radius: 10px;
+//     transition: opacity var(--transition-2), background-color var(--transition-2),
+//       color var(--transition-2);
+//     position: relative;
+//     z-index: 10;
+//     &:after {
+//       position: absolute;
+//       z-index: 10;
+//       content: "";
+//       right: 10px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       width: 24px;
+//       height: 24px;
+//       background: url(../img/arrow-down.svg) var(--background-1);
+//       // clip-path: polygon(0 0, 50% 100%, 100% 0);
+//       // background-color: white;
+//       transition: transform var(--transition-2);
+//     }
+//     @media (any-hover: hover) {
+//       &:hover {
+//         background-color: orange;
+//         color: white;
+//       }
+//     }
+//   }
+
+//   &__switch {
+//     display: none;
+//     &:nth-child(1):checked ~ .choice__select label:nth-child(1),
+//     &:nth-child(2):checked ~ .choice__select label:nth-child(2),
+//     &:nth-child(3):checked ~ .choice__select label:nth-child(3),
+//     &:nth-child(4):checked ~ .choice__select label:nth-child(4),
+//     &:nth-child(5):checked ~ .choice__select label:nth-child(5) {
+//       cursor: default;
+//       background-color: brown;
+//       opacity: 1;
+//       visibility: visible;
+//       max-height: 100vh;
+//       padding: 10px;
+//     }
+//   }
+
+//   &__select {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     transition: top var(--transition-2);
+//     label {
+//       display: block;
+//       border-radius: 10px;
+//       background-color: gray;
+//       color: white;
+//       transition: var(--transition-2);
+//       @media (any-hover: hover) {
+//         &:hover {
+//           background-color: red;
+//         }
+//       }
+  
+//       opacity: 0;
+//       visibility: hidden;
+//       max-height: 0;
+//     }
+//   }
+// }
+
+// .choice-overlay {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 200vw;
+//   height: 200vh;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity var(--transition-2), visibility var(--transition-2);
+//   background-color: rgba(#000, 0.8);
+// }

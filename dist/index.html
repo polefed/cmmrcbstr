@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание страницы сайта." />
+  <link rel="icon" href="data:;base64,=">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220317182324" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20220317182324">
+  <title>Главная</title>
+</head>
+
+<body>
+  <button class="scroll-up">
+  <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+    <path class="scroll-up__svg-path" d="
+        M24,0
+        a24,24 0 0,1 0,48
+        a24,24 0 0,1 0,-48
+      " />
+  </svg>
+</button>
+  <header id="header">
+  <div class="header-top">
+    <div class="header-top__container">
+      <ul class="header-top__left">
+      <li>
+        <button>
+          <span>Country:</span>
+          <span>Sweden</span>
+        </button>
+      </li>
+      <li>
+        <button>
+          <span>Language:</span>
+          <span>Svenska</span>
+        </button>
+      </li>
+      <li>
+        <button>
+          <span>Currency:</span>
+          <span>$</span>
+        </button>
+      </li>
+      </ul>
+      <ul class="header-top__right">
+        <li>
+          <a class="phone" href="tel:+32015287667" >
+            <div class="responsive-1">
+              <img src="img/phone.svg" loading="lazy" width="20" height="20" alt="phone">
+            </div>
+            <span data-typing-text="+32 (0) 15 28 76 67" >+32 (0) 15 28 76 67</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" >
+            <div class="responsive-1">
+              <span>12</span>
+              <img src="img/mail.svg" loading="lazy" width="24" height="24" alt="phone">
+            </div>
+            <span>Messages</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" >
+            <div class="responsive-1">
+              <img src="img/user.svg" loading="lazy" width="24" height="24" alt="phone">
+            </div>
+            <span>Username Surname</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header-middle">
+    <div class="header-middle__container">
+      <a class="logo header-middle__logo" href="#" target="_blank" >
+        <div class="logo__image">
+          <img src="img/logo.svg" loading="lazy" width="34" height="28" alt="logo">
+        </div>
+        <span class="logo__text">
+          Commerce<span>Booster</span>
+        </span>
+      </a>
+      <div class="search">
+        <input id="searchSwitch" type="checkbox">
+        <label for="searchSwitch" class="search__icon">
+          <svg class="search__icon-svg" width="24" height="24" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27388 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27388 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z"
+              fill="#1071FF" />
+          </svg>
+        </label>
+        <div class="search__block">
+          <input class="search__block-input" id="search" type="search" placeholder="search" required>
+          <label class="search__block-label" for="search">Search by product or SKU</label>
+        </div>
+        <label for="searchSwitch" class="search-overlay toggle-overlay"></label>
+      </div>
+      <button class="button-1">Quick Order Form</button>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="header-bottom__container">
+      <input id="navSwitch" type="checkbox" data-toggle=".nav">
+      <nav class="nav">
+        <label class="nav-close" for="navSwitch"></label>
+        <ul>
+          <li class="nav__item item-drop-down">
+            <input class="submenu-switch" id="submenuSwitch1" type="checkbox">
+            <label class="nav__link button-drop-down" for="submenuSwitch1">
+              <span class="nav__button-drop-down-text">HOME & GARDEN</span>
+              <span class="button-drop-down-arrow responsive-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.59 8.59003L12 13.17L7.41 8.59003L6 10L12 16L18 10L16.59 8.59003Z" fill="#0C0C0C"/>
+                  </svg>
+              </span>
+            </label>
+            <div class="submenu">
+              <div class="submenu__left">
+                <ul class="submenu__left-spoilers">
+                  <li class="submenu-spoiler">
+                    <div class="submenu-spoiler__button" data-toggle=".sc-1" >Kitchen</div>
+                    <ul class="submenu-spoiler__content sc-1">
+                      <li>
+                        <a href="#" target="_blank" >Kitchen, Dining & Bar</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Small kitchen Appliances</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Kitchen Tools and Gadgets</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Cookware</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Bakeware</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Kitchen Storage</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Flatware</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Knives and cutlery</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Bar accessories</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-spoiler">
+                    <div class="submenu-spoiler__button" data-toggle=".sc-2" >Smart Home</div>
+                    <ul class="submenu-spoiler__content sc-2">
+                      <li>
+                        <a href="#" target="_blank" >Smart door lock</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Smart plugs</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Smart TVs</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Media Steamers</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-spoiler">
+                    <div class="submenu-spoiler__button" data-toggle=".sc-3" >Improvements</div>
+                    <ul class="submenu-spoiler__content sc-3">
+                      <li>
+                        <a href="#" target="_blank" >Power tools</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Ceiling fans</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Home security</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-spoiler">
+                    <div class="submenu-spoiler__button" data-toggle=".sc-4" >Home Decor</div>
+                    <ul class="submenu-spoiler__content sc-4">
+                      <li>
+                        <a href="#" target="_blank" >Blankets</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Lamps</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Pillows</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu-spoiler">
+                    <div class="submenu-spoiler__button" data-toggle=".sc-5" >Garden & Outdoor</div>
+                    <ul class="submenu-spoiler__content sc-5">
+                      <li>
+                        <a href="#" target="_blank" >Gardening Tools</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Grills</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Fire pits</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" >Hydroponics</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <a class="link-1" href="#" target="_blank" >View all markets</a>
+              </div>
+              <div class="submenu__right">
+                <ul class="logo-list">
+                  <li class="responsive-1">
+                    <img src="img/logo.svg" loading="lazy" width="95" height="56" alt="image">
+                  </li>
+                  <li class="responsive-1">
+                    <img src="img/logo.svg" loading="lazy" width="95" height="56" alt="image">
+                  </li>
+                  <li class="responsive-1">
+                    <img src="img/logo.svg" loading="lazy" width="95" height="56" alt="image">
+                  </li>
+                  <li class="responsive-1">
+                    <img src="img/logo.svg" loading="lazy" width="95" height="56" alt="image">
+                  </li>
+                  <li class="responsive-1">
+                    <img src="img/logo.svg" loading="lazy" width="95" height="56" alt="image">
+                  </li>
+                  <li class="responsive-1">
+                    <img src="img/logo.svg" loading="lazy" width="95" height="56" alt="image">
+                  </li>
+                </ul>
+                <ul class="submenu-products">
+                  <li>
+                    <div class="responsive-1">
+                      <img src="img/logo.svg" loading="lazy" width="40" height="40" alt="image">
+                    </div>
+                    <p>ELECTRICAL Grill Mastergrill SUP412 <span>-30%</span></p>
+                  </li>
+                  <li>
+                    <div class="responsive-1">
+                      <img src="img/logo.svg" loading="lazy" width="40" height="40" alt="image">
+                    </div>
+                    <p>All products in “Home & Garden” Category <span>20% off</span></p>
+                  </li>
+                  <li>
+                    <div class="responsive-1">
+                      <img src="img/logo.svg" loading="lazy" width="40" height="40" alt="image">
+                    </div>
+                    <p>All products in “Home & Garden” Category <span>20% off</span></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <label class="submenu-overlay" for="submenuSwitch1" ></label>
+          </li>
+          <li class="nav__item item-drop-down">
+            <input class="submenu-switch" id="submenuSwitch2" type="checkbox">
+            <label class="nav__link button-drop-down" for="submenuSwitch2">
+              <span class="nav__button-drop-down-text">MOTORS</span>
+              <span class="button-drop-down-arrow responsive-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.59 8.59003L12 13.17L7.41 8.59003L6 10L12 16L18 10L16.59 8.59003Z" fill="#0C0C0C"/>
+                  </svg>
+              </span>
+            </label>
+          </li>
+          <li><a class="nav__link" href="catalog.html" target="_blank" >ELECTRONICS</a></li>
+          <li><a class="nav__link" href="about.html" target="_blank" >OFFICE EQUIPMENT</a></li>
+        </ul>
+      </nav>
+      <ul class="header-bottom__right">
+        <li>
+          <a href="#" target="_blank" >
+            <div class="responsive-1">
+              <img src="img/compare.svg" loading="lazy" width="16" height="16" alt="image">
+              <span>3</span>
+            </div>
+            <p>COMPARE</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" >
+            <div class="responsive-1">
+              <img src="img/star.svg" loading="lazy" width="16" height="16" alt="image">
+              <span>7</span>
+            </div>
+            <p>FAVORITES</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" >
+            <div class="responsive-1">
+              <img src="img/cart.svg" loading="lazy" width="16" height="16" alt="image">
+              <span>45</span>
+            </div>
+            <p>Cart</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</header>
+  <section class="section">
+  <div class="section__container">
+    <div class="section__top">
+      <h1>Our brands</h1>
+      <a class="link-1" href="#" target="_blank" >Show all brands</a>
+    </div>
+    <div class="main-slider section__list">
+      <div class="swiper main-slider__swiper">
+        <ul class="swiper-wrapper">
+    
+          <li class="swiper-slide main-slider__slide">
+            <div class="main-slider__image responsive-1">
+              <picture><source srcset="img/brand-1.webp" type="image/webp"><img src="img/brand-1.png" loading="lazy" width="205" height="68" alt="image"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide main-slider__slide">
+            <div class="main-slider__image responsive-1">
+              <picture><source srcset="img/brand-2.webp" type="image/webp"><img src="img/brand-2.png" loading="lazy" width="205" height="68" alt="image"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide main-slider__slide">
+            <div class="main-slider__image responsive-1">
+              <picture><source srcset="img/brand-3.webp" type="image/webp"><img src="img/brand-3.png" loading="lazy" width="205" height="68" alt="image"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide main-slider__slide">
+            <div class="main-slider__image responsive-1">
+              <picture><source srcset="img/brand-4.webp" type="image/webp"><img src="img/brand-4.png" loading="lazy" width="205" height="68" alt="image"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide main-slider__slide">
+            <div class="main-slider__image responsive-1">
+              <picture><source srcset="img/brand-1.webp" type="image/webp"><img src="img/brand-1.png" loading="lazy" width="205" height="68" alt="image"></picture>
+            </div>
+          </li>
+    
+        </ul>
+      </div>
+      <div class="main-slider__arrow-prev swiper-button-prev"></div>
+      <div class="main-slider__arrow-next swiper-button-next"></div>
+    </div>
+    <div class="main-slider__pagination"></div>
+  </div>
+</section>
+  <section class="section">
+  <div class="section__container">
+    <input id="transformProducts1" class="transform-switch" type="radio" name="transformProducts" checked>
+    <input id="transformProducts2" class="transform-switch" type="radio" name="transformProducts">
+    <div class="section__top">
+      <h2>Recommended products</h2>
+      <a class="link-1" href="#" target="_blank">Show all recommended products</a>
+      <div class="transform-navigation">
+        <label for="transformProducts1"></label>
+        <label for="transformProducts2"></label>
+      </div>
+    </div>
+    <ul class="products section__list">
+      <li class="products__item">
+        <div class="products__image responsive-2">
+          <picture><source srcset="img/product-1.webp" type="image/webp"><img src="img/product-1.jpg" loading="lazy" width="300" height="300" alt="image"></picture>
+          <span class="products__image-discount">-30%</span>
+          <span class="products__image-stock">In stock </span>
+          <button class="products__image-favorite"></button>
+          <a class="compare" href="#" target="_blank"></a>
+          <a class="share" href="#" target="_blank"></a>
+        </div>
+        <div class="products__info">
+          <p class="products__part">Omnires | Part No. 2123532</p>
+          <p class="products__label">Connection with a handle Omnires round</p>
+          <ul>
+            <li>
+              <p>Material of execution: brass</p>
+            </li>
+            <li>
+              <p>Manufacturer’s color: chrome</p>
+            </li>
+            <li>
+              <p>Guarantee: 5 years</p>
+            </li>
+          </ul>
+          <div class="products__price">
+            <span class="products__price-current">your price <span>$45.00</span> net </span>
+            <span class="products__price-old">$55.00 net</span>
+          </div>
+          <form class="products__actions">
+            <input type="number" min="1" value="1">
+            <button class="products__actions-item">Item</button>
+            <button class="products__actions-add button-1"><span>Add to cart</span></button>
+          </form>
+        </div>
+      </li>
+      <li class="products__item">
+        <div class="products__image responsive-2">
+          <picture><source srcset="img/product-2.webp" type="image/webp"><img src="img/product-2.jpg" loading="lazy" width="300" height="300" alt="image"></picture>
+          <span class="products__image-discount">-30%</span>
+          <span class="products__image-stock">In stock </span>
+          <button class="products__image-favorite"></button>
+          <a class="compare" href="#" target="_blank"></a>
+          <a class="share" href="#" target="_blank"></a>
+        </div>
+        <div class="products__info">
+          <p class="products__part">Omnires | Part No. 2123532</p>
+          <p class="products__label">Connection with a handle Omnires round</p>
+          <ul>
+            <li>
+              <p>Material of execution: brass</p>
+            </li>
+            <li>
+              <p>Manufacturer’s color: chrome</p>
+            </li>
+            <li>
+              <p>Guarantee: 5 years</p>
+            </li>
+          </ul>
+          <div class="products__price">
+            <span class="products__price-current">your price <span>$45.00</span> net </span>
+            <span class="products__price-old">$55.00 net</span>
+          </div>
+          <form class="products__actions">
+            <input type="number" min="1" value="1">
+            <button class="products__actions-item">Item</button>
+            <button class="products__actions-add button-1"><span>Add to cart</span></button>
+          </form>
+        </div>
+      </li>
+      <li class="products__item">
+        <div class="products__image responsive-2">
+          <picture><source srcset="img/product-3.webp" type="image/webp"><img src="img/product-3.jpg" loading="lazy" width="300" height="300" alt="image"></picture>
+          <span class="products__image-discount">-30%</span>
+          <span class="products__image-stock">In stock </span>
+          <button class="products__image-favorite"></button>
+          <a class="compare" href="#" target="_blank"></a>
+          <a class="share" href="#" target="_blank"></a>
+        </div>
+        <div class="products__info">
+          <p class="products__part">Omnires | Part No. 2123532</p>
+          <p class="products__label">Connection with a handle Omnires round</p>
+          <ul>
+            <li>
+              <p>Material of execution: brass</p>
+            </li>
+            <li>
+              <p>Manufacturer’s color: chrome</p>
+            </li>
+            <li>
+              <p>Guarantee: 5 years</p>
+            </li>
+          </ul>
+          <div class="products__price">
+            <span class="products__price-current">your price <span>$45.00</span> net </span>
+            <span class="products__price-old">$55.00 net</span>
+          </div>
+          <form class="products__actions">
+            <input type="number" min="1" value="1">
+            <button class="products__actions-item">Item</button>
+            <button class="products__actions-add button-1"><span>Add to cart</span></button>
+          </form>
+        </div>
+      </li>
+      <li class="products__item">
+        <div class="products__image responsive-2">
+          <picture><source srcset="img/product-4.webp" type="image/webp"><img src="img/product-4.jpg" loading="lazy" width="300" height="300" alt="image"></picture>
+          <span class="products__image-discount">-30%</span>
+          <span class="products__image-stock">In stock </span>
+          <button class="products__image-favorite"></button>
+          <a class="compare" href="#" target="_blank"></a>
+          <a class="share" href="#" target="_blank"></a>
+        </div>
+        <div class="products__info">
+          <p class="products__part">Omnires | Part No. 2123532</p>
+          <p class="products__label">Connection with a handle Omnires round</p>
+          <ul>
+            <li>
+              <p>Material of execution: brass</p>
+            </li>
+            <li>
+              <p>Manufacturer’s color: chrome</p>
+            </li>
+            <li>
+              <p>Guarantee: 5 years</p>
+            </li>
+          </ul>
+          <div class="products__price">
+            <span class="products__price-current">your price <span>$45.00</span> net </span>
+            <span class="products__price-old">$55.00 net</span>
+          </div>
+          <form class="products__actions">
+            <input type="number" min="1" value="1">
+            <button class="products__actions-item">Item</button>
+            <button class="products__actions-add button-1"><span>Add to cart</span></button>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+  <div class="section">
+    <div class="discount-section">
+      <div class="discount-section__container">
+        <div class="discount-section__info">
+          <div class="responsive-1">
+            <picture><source srcset="img/discount-section-img.webp" type="image/webp"><img src="img/discount-section-img.png" loading="lazy" alt="image"></picture>
+          </div>
+          <p><span>-20%</span> on power tools</p>
+        </div>
+        <a class="link-2" href="#" target="_blank" >Check offer</a>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+  <div class="section__container">
+    <input id="transformCategories1" class="transform-switch" type="radio" name="transformCategories" checked>
+    <input id="transformCategories2" class="transform-switch" type="radio" name="transformCategories">
+    <div class="section__top">
+      <h2>Recommended Categories</h2>
+      <a class="link-1" href="#" target="_blank">Show all categories</a>
+      <div class="transform-navigation">
+        <label for="transformCategories1"></label>
+        <label for="transformCategories2"></label>
+      </div>
+    </div>
+
+    <ul class="categories section__list">
+      <li class="categories__item">
+        <a class="categories__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/categories-1.webp" type="image/webp"><img src="img/categories-1.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="categories__label">Photovoltaics</p>
+      </li>
+      <li class="categories__item">
+        <a class="categories__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/categories-2.webp" type="image/webp"><img src="img/categories-2.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="categories__label">Electronics</p>
+      </li>
+      <li class="categories__item">
+        <a class="categories__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/categories-3.webp" type="image/webp"><img src="img/categories-3.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="categories__label">Light Sources</p>
+      </li>
+      <li class="categories__item">
+        <a class="categories__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/categories-4.webp" type="image/webp"><img src="img/categories-4.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="categories__label">Ventilation and Heating</p>
+      </li>
+    </ul>
+
+  </div>
+</section>
+  <section class="section">
+  <div class="section__container">
+    <input id="transformHints1" class="transform-switch" type="radio" name="transformHints" checked>
+    <input id="transformHints2" class="transform-switch" type="radio" name="transformHints">
+    <div class="section__top">
+      <h3>Hints for you</h3>
+      <a class="link-1" href="#" target="_blank">Show all hints</a>
+      <div class="transform-navigation">
+        <label for="transformHints1"></label>
+        <label for="transformHints2"></label>
+      </div>
+    </div>
+
+    <ul class="hints section__list">
+      <li class="hints__item">
+        <a class="hints__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/hints-1.webp" type="image/webp"><img src="img/hints-1.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="hints__label">How much does it cost to finish an apartment?</p>
+        <p class="hints__text">
+          Are you standing on the threshold of your own "M", to which you have just picked up the keys, and with the eye
+        </p>
+          <a class="hints__link link-1" href="#" target="_blank" >Read more</a>
+      </li>
+      <li class="hints__item">
+        <a class="hints__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/hints-2.webp" type="image/webp"><img src="img/hints-2.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="hints__label">Demolition of the load-bearing wall</p>
+        <p class="hints__text">
+          Are you planning a home renovation or renovation? Your vision is limited by the load-bearing wall, which you
+        </p>
+          <a class="hints__link link-1" href="#" target="_blank" >Read more</a>
+      </li>
+      <li class="hints__item">
+        <a class="hints__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/hints-3.webp" type="image/webp"><img src="img/hints-3.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="hints__label">What color to paint a hall in a block of flats? </p>
+        <p class="hints__text">
+          Matching the right paint is a real challenge. If you are wondering what color to paint your hall with, you can
+        </p>
+          <a class="hints__link link-1" href="#" target="_blank" >Read more</a>
+      </li>
+      <li class="hints__item">
+        <a class="hints__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/hints-4.webp" type="image/webp"><img src="img/hints-4.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="hints__label">How does a concrete pump work?</p>
+        <p class="hints__text">
+          A concrete pump is currently one of the most common equipment used on construction sites. Its operation
+        </p>
+          <a class="hints__link link-1" href="#" target="_blank" >Read more</a>
+      </li>
+    </ul>
+
+  </div>
+</section>
+  <div class="section buy-section">
+    <div class="section__container buy-section__container">
+      <div class="buy-section__left">
+        <div class="buy-section__image responsive-2">
+          <picture><source srcset="img/buy-image.webp" type="image/webp"><img src="img/buy-image.jpg" loading="lazy" width="350" height="350" alt="image"></picture>
+        </div>
+      </div>
+      <div class="buy-section__info">
+        <h4>Buy this bundle and save $100!</h4>
+        <p>Longer sentence, for just two lines and it could be very very long</p>
+        <a class="link-2" href="#" target="_blank" >Buy this bundle</a>
+      </div>
+    </div>
+  </div>
+  <div class="section new-section">
+  <ul class="section__container new">
+    <li>
+      <p><span>New tool kits!</span></p>
+      <div class="responsive-1">
+        <picture><source srcset="img/new-1.webp" type="image/webp"><img src="img/new-1.jpg" loading="lazy" width="204" height="230" alt="image"></picture>
+      </div>
+    </li>
+    <li>
+      <p><span>New rules for wind farms!</span></p>
+      <div class="responsive-1">
+        <picture><source srcset="img/new-2.webp" type="image/webp"><img src="img/new-2.jpg" loading="lazy" width="204" height="230" alt="image"></picture>
+      </div>
+    </li>
+    <li>
+      <p><span>New iPhone now available!</span></p>
+      <div class="responsive-1">
+        <picture><source srcset="img/new-3.webp" type="image/webp"><img src="img/new-3.jpg" loading="lazy" width="204" height="230" alt="image"></picture>
+      </div>
+    </li>
+  </ul>
+</div>
+  <div class="section buy-section">
+    <div class="delivery-section">
+      <div class="section__container buy-section__container delivery">
+        <div class="buy-section__info delivery__info">
+          <h5>DPD delivery already available!</h5>
+          <p>Choose DPD for speed, ease and convenience. Track your parcel in real time. This will help you plan your work while waiting for the parcel.</p>
+          <a class="button-1" href="#" target="_blank" >Show more</a>
+        </div>
+        <div class="buy-section__media">
+          <div class="buy-section__image responsive-2">
+            <picture><source srcset="img/delivery.webp" type="image/webp"><img src="img/delivery.png" loading="lazy" width="350" height="350" alt="image"></picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+  <div class="section__container">
+    <input id="transformEvents1" class="transform-switch" type="radio" name="transformEvents" checked>
+    <input id="transformEvents2" class="transform-switch" type="radio" name="transformEvents">
+    <div class="section__top">
+      <h5>Events for you</h5>
+      <a class="link-1" href="#" target="_blank">Show all events</a>
+      <div class="transform-navigation">
+        <label for="transformEvents1"></label>
+        <label for="transformEvents2"></label>
+      </div>
+    </div>
+
+    <ul class="events section__list">
+      <li class="events__item">
+        <a class="events__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/events-1.webp" type="image/webp"><img src="img/events-1.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="events__label">Electrician course for electricians with SEP licence</p>
+        <p class="events__date">23.05.2021 | London, UK</p>
+        <p class="events__text">
+          This course is conducted in the form of lectures via the Internet and ends with an examination, also online
+        </p>
+          <a class="events__link link-3" href="#" target="_blank" >Know more</a>
+      </li>
+      <li class="events__item">
+        <a class="events__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/events-2.webp" type="image/webp"><img src="img/events-2.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="events__label">Interior design and decoration</p>
+        <p class="events__date">04-06.11.2021 | London, UK</p>
+        <p class="events__text">
+          This course is conducted in the form of lectures via the Internet and ends with an examination, also online
+        </p>
+        <a class="events__link link-3" href="#" target="_blank" >Know more</a>
+      </li>
+      <li class="events__item">
+        <a class="events__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/events-3.webp" type="image/webp"><img src="img/events-3.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="events__label">AutoCAD 2d basic level</p>
+        <p class="events__date">15.06.2021 | London, UK</p>
+        <p class="events__text">
+          This course is conducted in the form of lectures via the Internet and ends with an examination, also online
+        </p>
+        <a class="events__link link-3" href="#" target="_blank" >Know more</a>
+      </li>
+      <li class="events__item">
+        <a class="events__image responsive-2 hover-img" href="work.html" target="_blank" >
+          <picture><source srcset="img/events-4.webp" type="image/webp"><img src="img/events-4.jpg" loading="lazy" width="100" height="100" alt="image"></picture>
+        </a>
+        <p class="events__label">Paving engineer with a road construction machine licence</p>
+        <p class="events__date">31.03.2021 | London, UK</p>
+        <p class="events__text">
+          This course is conducted in the form of lectures via the Internet and ends with an examination, also online
+        </p>
+        <a class="events__link link-3" href="#" target="_blank" >Know more</a>
+      </li>
+    </ul>
+
+  </div>
+</section>
+  <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__top">
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler1" type="checkbox">
+          <label class="spoiler__button" for="spoiler1">Sign up for news</label>
+          <div class="spoiler__content">
+            <p>
+              Keep up to date with the latest product launches and news. Find out more about our brands and get special promo codes.
+            </p>
+            <form class="wpcf7" action="#" method="post">
+              <input type="email" placeholder="Your e-mail address" required>
+              <button class="button-1" type="submit">Sign up for newsletter</button>
+              <label>
+                <input type="checkbox">
+                <span>I accept</span> <a href="#" target="_blank" >the personal data treatment.</a>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler2" type="checkbox">
+          <label class="spoiler__button" for="spoiler2">How to buy</label>
+          <ul class="spoiler__content">
+            <li><a target="_blank" href="#">Payment methods</a></li>
+            <li><a target="_blank" href="#">Order and pick up</a></li>
+            <li><a target="_blank" href="#">Order with delivery</a></li>
+            <li><a target="_blank" href="#">Shopping over the phone</a></li>
+            <li><a target="_blank" href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler3" type="checkbox">
+          <label class="spoiler__button" for="spoiler3">Help</label>
+          <ul class="spoiler__content">
+            <li><a target="_blank" href="#">Contact</a></li>
+            <li><a target="_blank" href="#">Online Help</a></li>
+            <li><a target="_blank" href="#">Our Commitments</a></li>
+            <li><a target="_blank" href="#">Give feedback</a></li>
+          </ul>
+        </div>
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler4" type="checkbox">
+          <label class="spoiler__button" for="spoiler4">Services</label>
+          <ul class="spoiler__content">
+            <li><a target="_blank" href="#">Transport</a></li>
+            <li><a target="_blank" href="#">Design service</a></li>
+            <li><a target="_blank" href="#">Paint an plaster mixing service</a></li>
+            <li><a target="_blank" href="#">Dimensioning and assemly service</a></li>
+            <li><a target="_blank" href="#">Return of used equipment</a></li>
+            <li><a target="_blank" href="#">Additional services</a></li>
+          </ul>
+        </div>
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler5" type="checkbox">
+          <label class="spoiler__button" for="spoiler5">About</label>
+          <ul class="spoiler__content">
+            <li><a target="_blank" href="#">About us</a></li>
+            <li><a target="_blank" href="#">Press Office</a></li>
+            <li><a target="_blank" href="#">For suppliers</a></li>
+            <li><a target="_blank" href="#">Regulations</a></li>
+            <li><a target="_blank" href="#">Privacy Policy</a></li>
+            <li><a target="_blank" href="#">Cookies</a></li>
+            <li><a target="_blank" href="#">Personal Data Request</a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="footer__bottom">
+      <span>2021 Divante S.A.</span>
+      <ul class="socials">
+        <li>
+          <a class="hover-img responsive-1" href="#" target="_blank">
+            <img src="img/facebook.svg" width="24" height="24" loading="lazy" alt="image">
+          </a>
+        </li>
+        <li>
+          <a class="hover-img responsive-1" href="#" target="_blank">
+            <img src="img/instagram.svg" width="24" height="24" loading="lazy" alt="image">
+          </a>
+        </li>
+        <li>
+          <a class="hover-img responsive-1" href="#" target="_blank">
+            <img src="img/youtube.svg" width="24" height="24" loading="lazy" alt="image">
+          </a>
+        </li>
+      </ul>
+      <a class="logo" href="#" target="_blank" >
+        <div class="logo__image">
+          <img src="img/logo.svg" loading="lazy" width="34" height="28" alt="logo">
+        </div>
+        <span class="logo__text">
+          Commerce<span>Booster</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220317182324"></script>
+  <script src="js/app.min.js?_v=20220317182324" defer></script>
+</body>
+
+</html>

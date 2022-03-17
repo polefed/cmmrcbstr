@@ -1,0 +1,145 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// spoiler
+
+.spoiler {
+  a {
+    transition: var(--transition-1);
+    @media (any-hover: hover) {
+      background-image: linear-gradient(var(--color-2), var(--color-2));
+    background-size: 0 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: background-size var(--transition-2),
+    color var(--transition-2);
+    @media (any-hover: hover) {
+    &:hover {
+      background-size: 100% 2px, auto;
+      color: var(--color-2);
+    }
+    }
+  }
+  }
+
+  
+  &:nth-child(1) {
+    @media (min-width:1201px) {
+      flex: 0 0 300px;
+      margin-right: 12.7rem;
+    }
+  }
+
+
+
+  overflow: hidden;
+  &__switch {
+    display: none;
+    @media (max-width: 1200px) {
+      &:checked ~ .spoiler__button {
+        background-color: var(--color-2);
+      }
+      &:checked ~ .spoiler__button:after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:checked ~ .spoiler__content {
+        margin-top: 2.4rem;
+        transform: translateX(0);
+        opacity: 1;
+        max-height: 100vh;
+      }
+    }
+  }
+  &__button {
+    font: var(--font-5);
+    margin-bottom: 2.4rem;
+    display: block;
+    cursor: default;
+    @media (max-width: 1200px) {
+      background-color: var(--color-13);
+      color: var(--color-1);
+      border-radius: 10px;
+      padding: 10px 30px 10px 10px;
+      margin: 0;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        background-color: var(--color-1);
+        clip-path: var(--cross-5);
+        width: 10px;
+        height: 10px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform var(--transition-2);
+      }
+    }
+  }
+  &__content {
+    display: grid;
+    gap: 8px;
+    @media (max-width: 1200px) {
+      transition: var(--transition-2);
+      transform: translateX(-100%);
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// spoilers ( js )
+
+.submenu-spoiler {
+  overflow: hidden;
+  &__button {
+    cursor: default;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+      background-color: var(--color-13);
+      color: var(--color-1);
+      border-radius: 10px;
+      padding: 10px 30px 10px 10px;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        // background-color: white;
+        background-color: var(--color-1);
+        clip-path: var(--cross-5);
+        width: 10px;
+        height: 10px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform var(--transition-2);
+      }
+    }
+    @media (max-width: 1200px) {
+      transition: var(--transition-2);
+      &.__active {
+        background-color: var(--color-2);
+        &:after {
+          transform: translateY(-50%) rotate(45deg);
+        }
+      }
+    }
+  }
+  &__content {
+    @media (max-width: 1200px) {
+      transition: var(--transition-2);
+      transform: translateX(-100%);
+      opacity: 0;
+      max-height: 0;
+      &.__active {
+        transform: translateX(0);
+        opacity: 1;
+        max-height: 100vh;
+        margin-top: 10px;
+      }
+    }
+  }
+}

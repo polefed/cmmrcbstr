@@ -1,0 +1,125 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px 20px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--color-4);
+    border-radius: 8px;
+  }
+  &__image {
+    padding-bottom: 82%;
+    position: relative;
+  }
+  &__info {
+    padding: 8px;
+  }
+  &__image-discount {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    background-color: var(--color-8);
+    color: var(--color-3);
+    font: var(--font-3);
+    padding: 0.4rem 0.8rem;
+  }
+  &__image-stock {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    padding: 2px 8px 2px 20px;
+    color: var(--color-9);
+    background: url(../img/check-circle.svg) left 0 top 50%/16px no-repeat;
+    border: 1px solid var(--color-4);
+    border-radius: 4px;
+  }
+  &__image-favorite {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-7) url(../img/star.svg) 50% 50%/16px no-repeat;
+  }
+  &__part {
+    color: var(--color-5);
+  }
+  &__label {
+    font: var(--font-5);
+  }
+  ul {
+    display: grid;
+    gap: 4px;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  &__price-current {
+    font: var(--font-3);
+    color: var(--color-2);
+    span {
+      font: var(--font-5);
+    }
+  }
+  &__price-old {
+    text-decoration: line-through;
+    color: var(--color-8);
+  }
+  &__actions {
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    gap: 8px;
+  }
+  input,
+  &__actions-item {
+    border: 1px solid var(--color-6);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  input {
+    text-align: center;
+  }
+  &__actions-item {
+    padding-right: 46px;
+    background: url(../img/arrow-down-blue.svg) right 16px top 50%/24px
+      no-repeat;
+  }
+  &__actions-add {
+    grid-column: span 2;
+    background-color: var(--color-2);
+    color: var(--color-3);
+    border-radius: 30px;
+    padding: 12px;
+    span {
+      background: url(../img/arrow-down-white.svg) right 0 top 50%/24px
+        no-repeat;
+      padding-right: 28px;
+    }
+  }
+}
+
+.share,
+.compare {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 8px;
+}
+.compare {
+  background: url(../img/compare.svg) var(--background-1);
+  right: 8px;
+}
+.share {
+  background: url(../img/share.svg) var(--background-1);
+  right: 40px;
+}
