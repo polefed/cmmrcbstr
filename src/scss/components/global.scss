@@ -49,27 +49,28 @@ body {
 .section {
   padding: 40px 0;
   &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    @media (min-width: 1201px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
     margin-bottom: 3rem;
     position: sticky;
     top: 20px;
-    // h1,
-    // h2,
-    // h3,
-    // h4,
-    // h5,
-    // h6 {
-    //   @media (max-width: 1200px) {
-    //     flex: 1 1 100%;
-    //   }
+    // @media (max-width: 1200px) {
+    //   display: inline-flex;
+    //   flex-direction: column;
+    //   justify-content: flex-start;
+    //   align-items: flex-start;
     // }
     a {
       color: var(--color-2);
       font: var(--font-2);
+      @media (max-width: 1200px) {
+        margin-top: 5px;
+      }
     }
   }
   &__list {

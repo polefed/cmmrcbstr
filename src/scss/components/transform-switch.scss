@@ -8,6 +8,7 @@
   &:nth-child(1):checked ~ .section__top .transform-navigation label:nth-child(1),
   &:nth-child(2):checked ~ .section__top .transform-navigation label:nth-child(2) {
   background-color: var(--color-7);
+  border: 1px solid var(--color-7);
 }
   &:nth-child(1) {
     @media (max-width: 1200px) {
@@ -102,6 +103,7 @@
 
 
 .transform-navigation {
+  margin-top: 5px;
   flex: 1 1 100%;
   display: flex;
   align-self: center;

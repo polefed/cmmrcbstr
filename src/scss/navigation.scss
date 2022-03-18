@@ -7,9 +7,9 @@
   @media (min-width: 769px) {
     display: none;
   }
-  flex: 0 0 24px;
-  height: 24px;
-  border-radius: 5px;
+  flex: 0 0 30px;
+  height: 30px;
+  // border-radius: 5px;
   transition: transform var(--transition-2);
   --burgerColor-1: var(--color-2);
   --burgerColor-2: transparent;
@@ -245,12 +245,12 @@
   transition: max-height var(--transition-2), opacity var(--transition-2),
     transform var(--transition-2);
   opacity: 0;
+  transform: translateX(-100%);
   @media (max-width: 768px) {
     position: relative;
     top: 0;
     left: 0;
     max-height: 0;
-    transform: translateX(-100%);
   }
   &__item {
   }
