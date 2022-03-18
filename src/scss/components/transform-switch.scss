@@ -8,7 +8,9 @@
   &:nth-child(1):checked ~ .section__top .transform-navigation label:nth-child(1),
   &:nth-child(2):checked ~ .section__top .transform-navigation label:nth-child(2) {
   background-color: var(--color-7);
-  border: 1px solid var(--color-7);
+  // border: 1px solid var(--color-7);
+  // opacity: 0.5;
+  opacity: 1;
 }
   &:nth-child(1) {
     @media (max-width: 1200px) {
@@ -118,7 +120,8 @@
     // background-color: var(--color-13);
     transition: var(--transition-2);
     border-radius: 8px;
-    border: 1px solid var(--color-2);
+    // border: 2px solid var(--color-2);
+    opacity: 0.5;
 
     position: relative;
     &:before {
@@ -128,8 +131,8 @@
       top: 50%;
       transform: translate(-50%, -50%);
       // background-color: var(--color-3);
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
     }
   }
