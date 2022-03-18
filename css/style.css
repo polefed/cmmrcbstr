@@ -392,11 +392,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
   margin-bottom: 3rem;
   position: -webkit-sticky;
   position: sticky;
@@ -796,46 +791,6 @@ body::-webkit-scrollbar-thumb {
   visibility: visible;
 }
 
-.scroll-up {
-  position: fixed;
-  z-index: 100;
-  right: 20px;
-  bottom: 100px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 4px var(--color-16);
-  transition: var(--transition-2);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(50px);
-}
-
-.scroll-up:before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  width: 10px;
-  height: 10px;
-  background-color: var(--color-16);
-}
-
-.scroll-up.__active {
-  opacity: 0.5;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-up__svg-path {
-  fill: none;
-  stroke: var(--color-2);
-  stroke-width: 4px;
-}
-
 .transform-switch {
   display: none;
 }
@@ -843,9 +798,11 @@ body::-webkit-scrollbar-thumb {
 .transform-switch:nth-child(1):checked ~ .section__top .transform-navigation label:nth-child(1),
 .transform-switch:nth-child(2):checked ~ .section__top .transform-navigation label:nth-child(2) {
   background-color: var(--color-7);
+  border: 1px solid var(--color-7);
 }
 
 .transform-navigation {
+  margin-top: 5px;
   flex: 1 1 100%;
   display: flex;
   align-self: center;
@@ -879,6 +836,46 @@ body::-webkit-scrollbar-thumb {
 
 .transform-navigation label:nth-child(2):before {
   background: url(../img/transform-column.svg) var(--background-1);
+}
+
+.scroll-up {
+  position: fixed;
+  z-index: 100;
+  right: 20px;
+  bottom: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 4px var(--color-13);
+  transition: var(--transition-2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+}
+
+.scroll-up:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-8);
+}
+
+.scroll-up.__active {
+  opacity: 0.5;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-up__svg-path {
+  fill: none;
+  stroke: var(--color-8);
+  stroke-width: 4px;
 }
 
 .header-top {
@@ -1042,9 +1039,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #navSwitch {
-  flex: 0 0 24px;
-  height: 24px;
-  border-radius: 5px;
+  flex: 0 0 30px;
+  height: 30px;
   transition: transform var(--transition-2);
   --burgerColor-1: var(--color-2);
   --burgerColor-2: transparent;
@@ -1157,6 +1153,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   transition: max-height var(--transition-2), opacity var(--transition-2), transform var(--transition-2);
   opacity: 0;
+  transform: translateX(-100%);
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -2168,16 +2165,32 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wpcf7 input[type=checkbox] {
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--color-2);
-  background-color: var(--color-3);
+  font-size: 4px;
+  flex: 0 0 4em;
+  height: 4em;
   border-radius: 4px;
-  transition: background-color var(--transition-2);
+  overflow: hidden;
+  background-color: var(--color-3);
+  position: relative;
 }
 
-.wpcf7 input[type=checkbox]:checked {
-  background-color: var(--color-2);
+.wpcf7 input[type=checkbox]:checked:before {
+  border-left: none;
+  border-top: none;
+  width: 2em;
+  border-color: var(--color-2);
+  transform: rotate(45deg) translate(0.5em, -1em);
+}
+
+.wpcf7 input[type=checkbox]:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.4em solid var(--color-2);
+  transition: var(--transition-1);
 }
 
 .wpcf7 a {
@@ -2335,6 +2348,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 1201px) {
+  .section__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
   .transform-navigation {
     display: none;
   }
@@ -2365,6 +2386,10 @@ body::-webkit-scrollbar-thumb {
 
   html {
     font-size: calc(5px + 5 * (100vw - 320px) / 1600);
+  }
+
+  .section__top a {
+    margin-top: 5px;
   }
 
   .transform-switch:nth-child(1):checked ~ .products {
@@ -2694,7 +2719,6 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     left: 0;
     max-height: 0;
-    transform: translateX(-100%);
   }
 
   .submenu__link {
