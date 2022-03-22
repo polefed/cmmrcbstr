@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание страницы сайта." />
   <link rel="icon" href="data:;base64,=">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220318172144">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220322153302">
   <title>Политика конфиденциальности</title>
 </head>
 
@@ -25,24 +25,68 @@
   <div class="header-top">
     <div class="header-top__container">
       <ul class="header-top__left">
-      <li>
+      <!-- <li>
         <button>
           <span>Country:</span>
           <span>Sweden</span>
         </button>
+      </li> -->
+      <li class="choice">
+  
+        <input id="cs1" name="choice1" type="radio" checked>
+        <input id="cs2" name="choice1" type="radio">
+        <input id="cs3" name="choice1" type="radio">
+        <input id="cs4" name="choice1" type="radio">
+        <input id="cs5" name="choice1" type="radio">
+      
+        <input class="choice__drop-switch" id="cds1" type="checkbox">
+        <label class="choice__drop-button" for="cds1">Сhoose a country</label>
+      
+        <label class="choice-overlay" for="cds1"></label>
+        
+        <div class="choice__select">
+          <label for="cs1">Sweden</label>
+          <label for="cs2">United Kingdom</label>
+          <label for="cs3">Denmark</label>
+          <label for="cs4" data-display="none" >Lorem ipsum dolor sit amet.</label>
+          <label for="cs5" data-display="none" >Option 5</label>
+        </div>
+      
       </li>
-      <li>
+      <li class="choice">
+  
+        <input id="cs11" name="choice2" type="radio" checked>
+        <input id="cs21" name="choice2" type="radio">
+        <input id="cs31" name="choice2" type="radio">
+        <input id="cs41" name="choice2" type="radio">
+        <input id="cs51" name="choice2" type="radio">
+      
+        <input class="choice__drop-switch" id="cds2" type="checkbox">
+        <label class="choice__drop-button" for="cds2">Сhoose a language</label>
+      
+        <label class="choice-overlay" for="cds2"></label>
+        
+        <div class="choice__select">
+          <label for="cs11">Swenska</label>
+          <label for="cs21">English</label>
+          <label for="cs31">Danish</label>
+          <label for="cs41" data-display="none" >Lorem ipsum dolor sit amet.</label>
+          <label for="cs51" data-display="none" >Option 5</label>
+        </div>
+      
+      </li>
+      <!-- <li>
         <button>
           <span>Language:</span>
           <span>Svenska</span>
         </button>
-      </li>
-      <li>
+      </li> -->
+      <!-- <li>
         <button>
           <span>Currency:</span>
           <span>$</span>
         </button>
-      </li>
+      </li> -->
       </ul>
       <ul class="header-top__right">
         <li>
@@ -339,7 +383,7 @@
       </p>
     </div>
   </div>
-  <script src="js/app.min.js?_v=20220318172144" defer></script>
+  <script src="js/app.min.js?_v=20220322153302" defer></script>
 </body>
 
 </html>

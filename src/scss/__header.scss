@@ -50,6 +50,7 @@
   }
   &__left {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     @media (max-width: 480px) {
       justify-content: space-between;
