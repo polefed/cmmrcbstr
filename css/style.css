@@ -891,8 +891,7 @@ body::-webkit-scrollbar-thumb {
 
 .header-top__left {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: 1.6rem;
 }
 
 .header-top__left button {
@@ -1048,13 +1047,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 .choice__drop-switch:checked ~ .choice__drop-button {
-  background-color: var(--color-17);
+  z-index: 10;
   color: var(--color-3);
   opacity: 1;
 }
 
-.choice__drop-switch:checked ~ .choice__drop-button:after {
+.choice__drop-switch:checked ~ .choice__drop-button svg {
   transform: translateY(-50%) rotate(180deg);
+}
+
+.choice__drop-switch:checked ~ .choice__drop-button svg path {
+  fill: var(--color-3);
 }
 
 .choice__drop-switch:checked ~ .choice__select {
@@ -1068,6 +1071,7 @@ body::-webkit-scrollbar-thumb {
   visibility: visible;
   max-height: 100vh;
   padding: 5px;
+  color: var(--color-3);
 }
 
 .choice__drop-switch:checked ~ .choice__select label:not(:last-child) {
@@ -1082,24 +1086,22 @@ body::-webkit-scrollbar-thumb {
 
 .choice__drop-button {
   display: block;
-  padding: 5px 30px 5px 5px;
+  padding: 5px 4rem 5px 5px;
   color: transparent;
   border-radius: 8px;
   transition: opacity var(--transition-2), background-color var(--transition-2), color var(--transition-2);
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
-.choice__drop-button:after {
+.choice__drop-button svg {
   position: absolute;
-  z-index: 10;
-  content: "";
+  z-index: 2;
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../img/arrow-down.svg) var(--background-1);
   transition: transform var(--transition-2);
 }
 
@@ -1113,11 +1115,12 @@ body::-webkit-scrollbar-thumb {
 .choice input[type=radio]:nth-child(4):checked ~ .choice__select label:nth-child(4),
 .choice input[type=radio]:nth-child(5):checked ~ .choice__select label:nth-child(5) {
   cursor: default;
-  background-color: var(--color-13);
+  color: var(--color-1);
+  background-color: var(--color-3);
   opacity: 1;
   visibility: visible;
   max-height: 100vh;
-  padding: 5px 20px 5px 5px;
+  padding: 5px 5px 5px 5px;
 }
 
 .choice__select {
@@ -1128,13 +1131,17 @@ body::-webkit-scrollbar-thumb {
   transition: top var(--transition-2);
 }
 
+.choice__select label[data-display=none] {
+  display: none;
+}
+
 .choice__select label {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
   border-radius: 8px;
-  background-color: var(--color-3);
+  background-color: var(--color-1);
   transition: var(--transition-2);
   opacity: 0;
   visibility: hidden;
@@ -1154,8 +1161,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #navSwitch {
-  flex: 0 0 30px;
-  height: 30px;
+  flex: 0 0 24px;
+  height: 24px;
   transition: transform var(--transition-2);
   --burgerColor-1: var(--color-2);
   --burgerColor-2: transparent;
@@ -1893,6 +1900,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 
+.products__image-favorite,
+.products .share,
+.products .compare {
+  transition: background-color var(--transition-1);
+}
+
 .products__image-favorite {
   position: absolute;
   top: 8px;
@@ -2394,22 +2407,6 @@ body::-webkit-scrollbar-thumb {
   line-height: 100%;
   text-align: center;
   margin-bottom: 20px;
-}
-
-*[data-display=none] {
-  display: none;
-}
-
-*[data-display=block] {
-  display: block;
-}
-
-*[data-display=inline-block] {
-  display: inline-block;
-}
-
-*[data-display=flex] {
-  display: flex;
 }
 
 @media (min-width: 481px) {
@@ -3109,8 +3106,12 @@ body::-webkit-scrollbar-thumb {
     color: var(--color-3);
   }
 
+  .choice__drop-button:hover path {
+    fill: white;
+  }
+
   .choice__select label:hover {
-    background-color: var(--color-16);
+    background-color: var(--color-13);
   }
 
   .nav a {
@@ -3164,6 +3165,12 @@ body::-webkit-scrollbar-thumb {
   .main-slider__arrow-prev:hover,
   .main-slider__arrow-next:hover {
     background-color: var(--color-2);
+  }
+
+  .products__image-favorite:hover,
+  .products .share:hover,
+  .products .compare:hover {
+    background-color: var(--color-13);
   }
 
   .wpcf7 span:hover {
