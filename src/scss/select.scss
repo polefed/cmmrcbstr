@@ -212,7 +212,8 @@
   &__drop-switch {
     display: none;
     &:checked ~ .choice__drop-button {
-      background-color: var(--color-17);
+      z-index: 10;
+      // background-color: var(--color-17);
       color: var(--color-3);
       opacity: 1;
       @media (any-hover: hover) {
@@ -221,8 +222,11 @@
         }
       }
     }
-    &:checked ~ .choice__drop-button:after {
+    &:checked ~ .choice__drop-button svg {
       transform: translateY(-50%) rotate(180deg);
+        path {
+          fill: var(--color-3);
+        }
     }
     &:checked ~ .choice__select {
       top: calc(100% + 5px);
@@ -234,6 +238,7 @@
       visibility: visible;
       max-height: 100vh;
       padding: 5px;
+      color: var(--color-3);
       &:not(:last-child) {
         margin-bottom: 5px;
       }
@@ -247,24 +252,24 @@
 
   &__drop-button {
     display: block;
-    padding: 5px 30px 5px 5px;
+    padding: 5px 4rem 5px 5px;
     color: transparent;
     border-radius: 8px;
     transition: opacity var(--transition-2), background-color var(--transition-2),
       color var(--transition-2);
     position: relative;
-    z-index: 10;
-    &:after {
+    z-index: 2;
+    svg {
       position: absolute;
-      z-index: 10;
-      content: "";
+      z-index: 2;
+      // content: "";
       right: 5px;
       top: 50%;
       transform: translateY(-50%);
       width: 2.4rem;
       height: 2.4rem;
       // clip-path: polygon(0 0, 50% 100%, 100% 0);
-      background: url(../img/arrow-down.svg) var(--background-1);
+      // background: url(../img/arrow-down.svg) var(--background-1);
       // background-color: white;
       transition: transform var(--transition-2);
     }
@@ -272,6 +277,9 @@
       &:hover {
         background-color: var(--color-2);
         color: var(--color-3);
+        path {
+          fill: white;
+        }
       }
     }
   }
@@ -285,7 +293,9 @@
     &:nth-child(5):checked ~ .choice__select label:nth-child(5) {
       cursor: default;
       // background-color: brown;
-      background-color: var(--color-13);
+      // background-color: var(--color-13);
+      color: var(--color-1);
+      background-color: var(--color-3);
       // svg {
       //   path {
       //     fill: white;
@@ -294,7 +304,7 @@
       opacity: 1;
       visibility: visible;
       max-height: 100vh;
-      padding: 5px 20px 5px 5px;
+      padding: 5px 5px 5px 5px;
     }
   }
 
@@ -304,6 +314,9 @@
     left: 0;
     width: 100%;
     transition: top var(--transition-2);
+    label[data-display="none"] {
+      display: none;
+    }
     label {
       // display: block;
 
@@ -313,12 +326,15 @@
       overflow: hidden;
 
       border-radius: 8px;
-      background-color: var(--color-3);
+      background-color: var(--color-1);
       // color: white;
       transition: var(--transition-2);
+      // @media (max-width: 480px) {
+      //   font-size: 12px;
+      // }
       @media (any-hover: hover) {
         &:hover {
-          background-color: var(--color-16);
+          background-color: var(--color-13);
         }
       }
   

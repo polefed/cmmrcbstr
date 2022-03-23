@@ -50,8 +50,8 @@
   }
   &__left {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    // flex-wrap: wrap;
+    gap: 1.6rem;
     @media (max-width: 480px) {
       justify-content: space-between;
       // align-self: flex-start;
