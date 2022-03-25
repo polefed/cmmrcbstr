@@ -890,7 +890,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header-top__left {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
 }
 
@@ -1086,7 +1087,7 @@ body::-webkit-scrollbar-thumb {
 
 .choice__drop-button {
   display: block;
-  padding: 5px 4rem 5px 5px;
+  padding: 5px 30px 5px 5px;
   color: transparent;
   border-radius: 8px;
   transition: opacity var(--transition-2), background-color var(--transition-2), color var(--transition-2);
@@ -1120,7 +1121,7 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
   visibility: visible;
   max-height: 100vh;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
 }
 
 .choice__select {
@@ -2507,6 +2508,7 @@ body::-webkit-scrollbar-thumb {
   :root {
     --font-5: 700 16px / 130% "BasierCircle";
     --font-8: 700 20px / 130% "BasierCircle";
+    --font-13: 400 14px / 150% "BasierSquare";
   }
 
   :root {
@@ -2576,6 +2578,10 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--color-2);
     -webkit-transition: background-color var(--transition-1);
     transition: background-color var(--transition-1);
+  }
+
+  .header-top__left {
+    font-size: 13px;
   }
 
   .header-top__right li:not(:last-child):after {
@@ -2712,10 +2718,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 992px) {
-  :root {
-    --font-13: 400 14px / 150% "BasierSquare";
-  }
-
   .transform-switch:nth-child(1):checked ~ .hints,
   .transform-switch:nth-child(1):checked ~ .events {
     display: flex;
@@ -2939,10 +2941,6 @@ body::-webkit-scrollbar-thumb {
 
   .header-top__container {
     flex-direction: column-reverse;
-  }
-
-  .header-top__left {
-    justify-content: space-between;
   }
 
   .header-top__right {
