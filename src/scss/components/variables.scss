@@ -38,10 +38,11 @@
   @media (max-width: 1200px) {
     --font-5: 700 16px / 130% "BasierCircle";
     --font-8: 700 20px / 130% "BasierCircle";
-  }
-  @media (max-width: 992px) {
     --font-13: 400 14px / 150% "BasierSquare";
   }
+  // @media (max-width: 992px) {
+  //   --font-13: 400 14px / 150% "BasierSquare";
+  // }
 
   // transition
   --transition-1: 0.3s;

@@ -207,6 +207,8 @@
 
 .choice {
   // max-width: 200px;
+  // flex: 0 1 250px;
+  
   position: relative;
 
   &__drop-switch {
@@ -252,7 +254,7 @@
 
   &__drop-button {
     display: block;
-    padding: 5px 4rem 5px 5px;
+    padding: 5px 30px 5px 5px;
     color: transparent;
     border-radius: 8px;
     transition: opacity var(--transition-2), background-color var(--transition-2),
@@ -304,7 +306,7 @@
       opacity: 1;
       visibility: visible;
       max-height: 100vh;
-      padding: 5px 5px 5px 5px;
+      padding: 5px;
     }
   }
 

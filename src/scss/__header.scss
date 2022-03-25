@@ -49,12 +49,22 @@
     }
   }
   &__left {
-    display: flex;
+    // display: flex;
     // flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 1200px) {
+      font-size: 13px;
+    }
     gap: 1.6rem;
     @media (max-width: 480px) {
-      justify-content: space-between;
+      // justify-content: space-between;
       // align-self: flex-start;
+      // display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+
     }
     span {
       &:nth-child(1) {
