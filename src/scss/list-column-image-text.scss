@@ -57,6 +57,12 @@
     border-radius: 50%;
     background: var(--color-7) url(../img/star.svg) 50% 50%/16px no-repeat;
   }
+  &__info {
+    span {
+      position: sticky;
+      left: 0;
+    }
+  }
   &__part {
     color: var(--color-5);
   }
@@ -71,6 +77,9 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    // span {
+    //   background-color: white;
+    // }
   }
   &__price-current {
     font: var(--font-3);
@@ -114,6 +123,7 @@
       background: url(../img/arrow-down-white.svg) right 0 top 50%/24px
         no-repeat;
       padding-right: 28px;
+      left: 10px;
     }
   }
 }

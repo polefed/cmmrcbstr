@@ -3,14 +3,19 @@
 
 .events {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   &__item {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     border-radius: 8px;
-    overflow: hidden;
+    // overflow: hidden;
+    span,
+    a {
+      position: sticky;
+      left: 0;
+    }
   }
   &__image {
     padding-bottom: 57%;

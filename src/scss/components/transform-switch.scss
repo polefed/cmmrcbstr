@@ -79,9 +79,9 @@
       }
     }
     @media (max-width: 768px) {
-      &:checked ~ .products .products__item {
-        flex: 0 0 100%;
-      }
+      // &:checked ~ .products .products__item {
+      //   flex: 0 0 100%;
+      // }
       &:checked ~ .categories {
         display: flex;
       }
@@ -91,6 +91,7 @@
       }
     }
     @media (max-width: 480px) {
+      &:checked ~ .products .products__item,
       &:checked ~ .hints .hints__item,
       &:checked ~ .events .events__item {
         flex: 0 0 100%;

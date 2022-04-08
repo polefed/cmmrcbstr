@@ -12,7 +12,12 @@
     flex-direction: column;
     gap: 1.6rem;
     border-radius: 8px;
-    overflow: hidden;
+    // overflow: hidden;
+    span,
+    a {
+      position: sticky;
+      left: 0;
+    }
   }
   &__image {
     padding-bottom: 57%;
